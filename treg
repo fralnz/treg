@@ -1,0 +1,6 @@
+#!/bin/bash
+file=$1
+asciinema rec "$file.cast"
+./cast2gif-x86_64-linux-musl "$file.cast" "$file.gif"
+rm $file.cast
+echo "Output: $file.gif"
